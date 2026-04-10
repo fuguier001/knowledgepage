@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学习星球 - 从小学到大学的知识点导航</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-left">
+      <h1 class="logo">学习星球</h1>
+      <span class="subtitle">从小学到大学的知识点导航</span>
+    </div>
+    <div class="header-center">
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+        <input type="text" id="searchInput" placeholder="搜索知识点..." autocomplete="off">
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="stage-filters" id="stageFilters">
+        <button class="stage-tag active" data-stage="all">全部</button>
+        <button class="stage-tag" data-stage="小学" style="--stage-color: #4CAF50">小学</button>
+        <button class="stage-tag" data-stage="初中" style="--stage-color: #2196F3">初中</button>
+        <button class="stage-tag" data-stage="高中" style="--stage-color: #FF9800">高中</button>
+        <button class="stage-tag" data-stage="大学" style="--stage-color: #9C27B0">大学</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="main-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-section">
+        <h3 class="sidebar-title">学科分类</h3>
+        <div class="subject-list" id="subjectList">
+          <!-- JS 动态生成 -->
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <h3 class="sidebar-title">统计</h3>
+        <div class="stats" id="stats">
+          <!-- JS 动态生成 -->
+        </div>
+      </div>
+    </aside>
+
+    <!-- Content -->
+    <main class="content" id="content">
+      <div class="content-header">
+        <h2 class="content-title" id="contentTitle">全部知识点</h2>
+        <span class="content-count" id="contentCount">0 个知识点</span>
+      </div>
+      <div class="card-grid" id="cardGrid">
+        <!-- JS 动态生成 -->
+      </div>
+      <div class="empty-state" id="emptyState" style="display:none">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+        <p>没有找到匹配的知识点</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
